@@ -10,17 +10,7 @@ body {
   line-height: 1.6;
   color: #333;
   background: #f9f9f9;
-  margin-top: 200px;
-}
-
-header .container {
-  width: 90%;
-  max-width: 1100px;
-  display: flex;
-  justify-content: space-between; 
-  align-items: center;     
-  margin: auto;       
-  padding: 0 2rem;
+  margin-top: 150px;
 }
 
 header {
@@ -34,128 +24,178 @@ header {
   box-shadow: 2px 20px 20px rgba(0, 0, 0, 0.3);
 }
 
+/* Unifiquei as duas regras de .container que você tinha */
 header .container {
+  width: 30%;
+  /* Antes estava 0%, mudei para 90% */
+  max-width: 1100px;
+  margin: 0 auto;
+  /* Isso ajuda a centralizar o bloco na tela */
   display: flex;
   justify-content: space-between;
-  padding: 0 21rem;
-  
+  align-items: center;
+  padding: 0 2rem;
+  /* Antes estava 21rem (muito grande), voltei para 2rem */
 }
-  
+
+/* O Wrapper empurra o menu para ocupar o espaço */
 .nav-wrapper {
   flex: 1;
   display: flex;
-  justify-content: center; /* centraliza horizontalmente */
+  justify-content: center;
+  /* Isso centraliza o menu (Home, About...) */
 }
-
-.nav-wrapper a:hover {
-  flex: 1;
-  display: flex;
-  transform: scale(0.9);
-}
-
-
 
 header nav ul {
+
   list-style: none;
   display: flex;
   gap: 2rem;
   margin: 0;
   font-size: 1.3rem;
   margin-right: -20px;
-  
 }
 
 header nav ul li a {
+
   color: #fff;
   text-decoration: none;
   font-weight: 500;
   transition: transform 1.0s;
+
 }
 
 header nav ul li a:hover {
+
   text-decoration: none;
-  
-  
 }
 
+/* Removemos a imagem de fundo antiga e colocamos o degradê roxo/azul */
 .home {
-  background: radial-gradient( #3F5EFB 10%, #46F9FC 90%);
-  color: white;
-  text-align: center;
-  padding: 25rem 0;
-  margin-top: -200px;
+  background: linear-gradient(135deg, #ffffff 0%, #dbeafe 50%, #6366f1 100%);
+  /* Ajuste as cores conforme gosto */
+  min-height: 103vh;
+  /* Garante que ocupe a tela toda */
+  padding-top: -70px;
+  /* Espaço para o menu fixo */
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  margin-top: -170px;
+  /* Removendo o margin negativo antigo */
 }
 
-.home h2 {
+/* Container flexível para alinhar Texto à Esquerda e Imagem à Direita */
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Estilo da área de texto */
+.home-text {
+  flex: 1;
+  /* Ocupa o espaço disponível */
+  text-align: center;
+  /* Alinha texto à esquerda */
+  padding-right: 2rem;
+}
+
+/* O Grande Título (Nome) */
+.home-text h1 {
+  font-family: 'Times New Roman', serif;
+  /* Fonte serifada igual da imagem */
+  font-size: 10rem;
+  /* Tamanho bem grande */
+  line-height: 0.9;
+  /* Altura da linha menor para juntar os nomes */
+  color: #000;
+  margin-bottom: 1rem;
+  /* ESTA É A MÁGICA DA QUEBRA DE LINHA DO JS */
+  white-space: pre-wrap;
+}
+
+/* O Cargo (Full-Stack Developer) */
+.home-text h2 {
+  font-family: 'Times New Roman', serif;
   font-size: 2.5rem;
+  font-weight: 400;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
 }
 
-.btn {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.75rem 1.5rem;
-  background: #46F9FC;
-  color: #3F5EFB;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background 0.5s;
+/* O parágrafo descritivo */
+.home-text p {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1rem;
+  color: #555;
+  max-width: 500px;
+  /* Limita a largura para não ficar muito comprido */
 }
 
-.btn:hover {
-  background: #3F5EFB;
-  color: #46F9FC;
-  
+/* Estilo da Imagem */
+.home-img {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  /* Joga a imagem para a direita */
 }
 
-.sobre{
-  background: radial-gradient( #3F5EFB 10%, #46F9FC 90%);
-  padding: 25rem 0;
-  text-align: center;
-  color: rgb(255, 255, 255);
-
+.home-img img {
+  width: 100%;
+  max-width: 700px;
+  /* Ajuste o tamanho da foto */
+  margin-top: 250px;
+  height: auto;
+  border-radius: 20px;
+  /* Se quiser bordas arredondadas ou remova para foto recortada */
+  object-fit: cover;
 }
 
 .sobre {
-  background: radial-gradient( #3F5EFB 10%, #46F9FC 90%);
-  min-height: 100vh; 
-  display: flex; 
-  justify-content: center; 
-  align-items: center; 
-  padding: 20px; 
-  color: rgb(255, 255, 255);
-
+  background-image: url('img/tela2.png');
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: rgb(0, 0, 0);
 }
 
-
 .sobre-container {
-  background: rgba(255, 255, 255, 0.15); 
-  backdrop-filter: blur(10px); 
-  -webkit-backdrop-filter: blur(10px); 
-  border: 1px solid rgba(255, 255, 255, 0.2); 
-  border-radius: 20px; 
-  
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+
   padding: 3rem;
-  max-width: 800px; 
+  max-width: 800px;
   text-align: center;
-  color: #fff;
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); 
-  
-  
+  color: #000000;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 
 .sobre-container h2 {
-  font-size: 1.5em;
+  font-family: 'Times New Roman', serif;
+  font-size: 60px;
   margin-bottom: 1.5rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
+  color: #779eb8;
 }
 
 .sobre-containerr p {
-  font-size: 1.1rem;
-  line-height: 1.6; 
+  font-family: 'Times New Roman', serif;
+  font-size: px;
+  line-height: 1.6;
   font-weight: 300;
 }
 
@@ -165,11 +205,17 @@ header nav ul li a:hover {
   box-shadow: 0 15px 40px 0 rgba(31, 38, 135, 0.5);
 }
 
-.habilidades{
-  background: radial-gradient( #3F5EFB 10%, #46F9FC 90%);
+.habilidades {
+  background-image: url('img/tela4.png');
+  background-size: cover;
   padding: 15rem 0;
   text-align: center;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+
+h2{font-family: 'Times New Roman', serif;
+  font-size: 60px;
+color: #3c82b1;
 }
 
 .skills-grid {
@@ -182,27 +228,23 @@ header nav ul li a:hover {
 
 .skill-card {
   background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 12px;
   padding: 2rem;
   width: 300px;
   transition: transform 0.3s ease;
   text-align: left;
-  color: #fff;
+  color: #000000;
 }
 
 .skill-card:hover {
   transform: translateY(-10px) scale(1.02);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
-.skill-card.a{
-  color: #ff0000;
-  font-size: 200px;
-}
 
 .skill-card h3 {
-  margin-bottom: 1rem;
-  font-size: 1.3rem;
+  font-family: 'Times New Roman', serif;
+  font-size: 1.7rem;
   border-bottom: 1px solid #ffffff33;
   padding-bottom: 0.5rem;
 }
@@ -228,21 +270,27 @@ header nav ul li a:hover {
   transform: translateY(0);
 }
 
-.contato {
-  background: radial-gradient( #3F5EFB 10%, #46F9FC 90%);
-  padding: 22rem 0;
-  text-align: center;
-  color: rgb(255, 255, 255);
-}
-
-.projetos{
-  background: radial-gradient( #3F5EFB 10%, #46F9FC 90%);
+.projetos {
+  background-image: url('img/tela5.png');
+  background-size: cover;
   padding: 15rem 0;
   text-align: center;
-  color: rgb(255, 255, 255);
+  color: #6366f1;
+
 
 
 }
+
+.projetos h2 {
+  font-family: 'Times New Roman', serif;
+  font-size: 60px;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #726794;
+}
+
 
 .cards {
   display: flex;
@@ -257,28 +305,34 @@ header nav ul li a:hover {
 .card {
   position: relative;
   width: 320px;
-  height: 400px; /* Altura fixa para ficar uniforme */
+  height: 400px;
+  /* Altura fixa para ficar uniforme */
   border-radius: 16px;
-  overflow: hidden; /* Importante para o zoom não sair da borda */
+  overflow: hidden;
+  /* Importante para o zoom não sair da borda */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  text-decoration: none; /* Remove sublinhado do link */
+  text-decoration: none;
+  /* Remove sublinhado do link */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  background: #1a1a1a; /* Cor de fundo caso a imagem não carregue */
+  background: #6366f1;
+  /* Cor de fundo caso a imagem não carregue */
 }
 
 /* Estilo da Imagem */
 .card-image {
   width: 100%;
   height: 100%;
-  background-color: rgba(250, 201, 216, 0.950)
+  background-color: rgba(245, 192, 195, 0.95)
 }
 
 .card-image img {
   width: 100%;
   height: 40%;
   position: center;
-  object-fit: cover; /* Faz a imagem cobrir tudo sem distorcer */
-  transition: transform 0.5s ease; /* Suavidade do zoom */
+  object-fit: cover;
+  /* Faz a imagem cobrir tudo sem distorcer */
+  transition: transform 0.5s ease;
+  /* Suavidade do zoom */
 }
 
 /* O conteúdo de texto (Título e P) */
@@ -288,16 +342,19 @@ header nav ul li a:hover {
   left: 0;
   width: 100%;
   padding: 2rem;
-  background: linear-gradient(to top, rgba(0,0,0,0.9), transparent); /* Degradê preto */
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+  /* Degradê preto */
   color: white;
-  transform: translateY(20px); /* Texto começa um pouco descido */
+  transform: translateY(20px);
+  /* Texto começa um pouco descido */
   transition: transform 0.3s ease;
 }
 
 .card h3 {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
-  color: #ffffff; /* Sua cor ciano para destaque */
+  color: #ffffff;
+  /* Sua cor ciano para destaque */
 }
 
 .card p {
@@ -312,7 +369,8 @@ header nav ul li a:hover {
   font-weight: bold;
   text-transform: uppercase;
   color: #fff;
-  opacity: 0; /* Começa invisível */
+  opacity: 0;
+  /* Começa invisível */
   transform: translateX(-10px);
   transition: all 0.3s ease;
 }
@@ -327,7 +385,8 @@ header nav ul li a:hover {
 
 /* 2. A imagem dá zoom */
 .card:hover .card-image img {
-  transform: scale(1.1); /* Aumenta 10% */
+  transform: scale(1.1);
+  /* Aumenta 10% */
 }
 
 /* 3. O texto sobe para posição original */
@@ -369,3 +428,40 @@ footer {
   transform: scale(0.9);
 }
 
+
+.contato {
+  background: linear-gradient(135deg, #ffffff 0%, #dbeafe 50%, #6366f1 100%);
+  /* Ajuste as cores conforme gosto */
+  padding: 22rem 0;
+  text-align: center;
+}
+
+.contato .container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.contato .container h2 {
+  font-family: 'Times New Roman', serif;
+  font-size: 60px;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #6366f1;
+}
+
+.contato .container p {
+  font-family: 'Times New Roman', serif;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #000000;
+  margin-bottom: 1rem;
+}

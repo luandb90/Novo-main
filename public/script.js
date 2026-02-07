@@ -12,9 +12,8 @@ const translations = {
       contact: "contato"
     },
     hero: {
-      title: "Desenvolvedor Full-Stack",
-      subtitle: "Foco em soluções completas, com experiência em suporte técnico e desenvolvimento web.",
-      button: "Vamos conversar!"
+      title: "Luan\n       Dias", // O \n fará a quebra de linha
+      role: "   Desenvolvedor Full-Stack", // Novo campo
     },
     about: {
       h2: "Sobre",
@@ -39,18 +38,18 @@ const translations = {
       a: "Ver Projeto"
     },
 
-  //  work2: {
-   //   h3: "Site Institucional.",
-  //    p: "Site responsivo para pequena empresa de tecnologia. Desenvolvido com HTML, CSS e JS.",
-  //    a: "Ver Projeto"
-  //  },
+    //  work2: {
+    //   h3: "Site Institucional.",
+    //    p: "Site responsivo para pequena empresa de tecnologia. Desenvolvido com HTML, CSS e JS.",
+    //    a: "Ver Projeto"
+    //  },
 
     contact: {
       h2: "Contatos",
       p1: "Vamos conversar sobre oportunidades, ideias ou projetos?",
       p2: "Email: luandb90@gmail.com",
       p3: "Telefone: +55 (11) 94457-4807",
-      p4: "LinkedIn: www.linkedin.com/in/luan-dias90" ,
+      p4: "LinkedIn: www.linkedin.com/in/luan-dias90",
     },
     // Adicione mais traduções aqui conforme precisar
   },
@@ -63,9 +62,9 @@ const translations = {
       contact: "Contact"
     },
     hero: {
-      title: "Full-Stack Developer",
-      subtitle: "Focus on complete solutions, with experience in technical support and web development.",
-      button: "Let's talk!"
+      title: "Luan\n       Dias",
+      role: "   Full-Stack Developer",
+
     },
     about: {
       h2: "About",
@@ -90,11 +89,11 @@ const translations = {
       a: "View Project"
     },
 
-   // work2: {
-   //   h3: "Institutional Website.",
-   //   p: "Application for logging tickets and tracking support in real time.",
-   //   a: "View Project"
-   // },
+    // work2: {
+    //   h3: "Institutional Website.",
+    //   p: "Application for logging tickets and tracking support in real time.",
+    //   a: "View Project"
+    // },
 
     contact: {
       h2: "Contact",
